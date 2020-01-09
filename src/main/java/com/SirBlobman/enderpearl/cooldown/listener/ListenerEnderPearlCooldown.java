@@ -2,11 +2,6 @@ package com.SirBlobman.enderpearl.cooldown.listener;
 
 import java.text.DecimalFormat;
 import java.util.List;
-import java.util.UUID;
-
-import com.SirBlobman.api.utility.ItemUtil;
-import com.SirBlobman.enderpearl.cooldown.EnderpearlCooldown;
-import com.SirBlobman.enderpearl.cooldown.utility.EnderpearlCooldownManager;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -23,6 +18,10 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitScheduler;
+
+import com.SirBlobman.api.utility.ItemUtil;
+import com.SirBlobman.enderpearl.cooldown.EnderpearlCooldown;
+import com.SirBlobman.enderpearl.cooldown.utility.EnderpearlCooldownManager;
 
 public class ListenerEnderPearlCooldown implements Listener {
     private final EnderpearlCooldown plugin;
@@ -88,7 +87,7 @@ public class ListenerEnderPearlCooldown implements Listener {
     private void checkCooldown(Player player, Cancellable e) {
         if(isWorldIgnored(player)) return;
         if(EnderpearlCooldownManager.canBypass(player)) return;
-        UUID uuid = player.getUniqueId();
+        // UUID uuid = player.getUniqueId();
 
         if(EnderpearlCooldownManager.isInCooldown(player)) {
             e.setCancelled(true);

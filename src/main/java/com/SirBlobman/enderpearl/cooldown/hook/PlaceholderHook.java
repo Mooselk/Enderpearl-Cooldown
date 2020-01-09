@@ -2,12 +2,10 @@ package com.SirBlobman.enderpearl.cooldown.hook;
 
 import java.text.DecimalFormat;
 
+import org.bukkit.entity.Player;
+
 import com.SirBlobman.enderpearl.cooldown.EnderpearlCooldown;
 import com.SirBlobman.enderpearl.cooldown.utility.EnderpearlCooldownManager;
-
-import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.entity.EnderPearl;
-import org.bukkit.entity.Player;
 
 public interface PlaceholderHook {
     default String getPlaceholder(EnderpearlCooldown plugin, Player player, String id) {

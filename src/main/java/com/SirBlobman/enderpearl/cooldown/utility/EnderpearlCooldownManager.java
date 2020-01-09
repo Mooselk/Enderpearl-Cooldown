@@ -1,18 +1,21 @@
 package com.SirBlobman.enderpearl.cooldown.utility;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
-import com.SirBlobman.api.utility.Util;
-import com.SirBlobman.enderpearl.cooldown.EnderpearlCooldown;
-
 import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.entity.EnderPearl;
 import org.bukkit.entity.Player;
 import org.bukkit.permissions.Permission;
 import org.bukkit.permissions.PermissionAttachmentInfo;
 import org.bukkit.permissions.PermissionDefault;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import com.SirBlobman.api.utility.Util;
+import com.SirBlobman.enderpearl.cooldown.EnderpearlCooldown;
 
 public final class EnderpearlCooldownManager {
     private static final Map<UUID, Long> cooldownExpireMap = Util.newMap();
